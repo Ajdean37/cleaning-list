@@ -5,19 +5,19 @@ function getListsById(req, res, next) {
       {
         id: 1,
         day: "day of the week",
-        room: "some room"
+        room: "some room",
         detail: "some detail"
       },
       {
         id: 2,
         day: "day of the week",
-        room: "some room"
+        room: "some room",
         detail: "some detail"
       },
       {
         id: 3,
         day: "day of the week",
-        room: "some room"
+        room: "some room",
         detail: "some detail"
       },
     ];
