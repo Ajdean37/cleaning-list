@@ -2,9 +2,7 @@ const pool = require("../databases/pool");
 
 
 async function createListService(req, res, next) {
- 
-  // BAD PRACTICE WILL EXPOSE YOU TO SQL INECTION ATTACKS
-  // let query = `INSERT INTO quote (${Object.keys(req.body)}) VALUES (${Object.values(req.body)});`
+  
   let query = `INSERT INTO list SET ?;`;
 
   const result = await pool.query( query, req.body );
