@@ -6,6 +6,7 @@ let dbConfig = {
   password: process.env.MYSQL_PASSWORD,
   database: process.env.DATABASE_NAME,
 };
+console.log(dbConfig);
 
 let pool = mysql.createPool( dbConfig );
 
