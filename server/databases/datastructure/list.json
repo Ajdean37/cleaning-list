@@ -1,10 +1,56 @@
 {
-    "id": 0,
-    "day": "",
-    "room": "",
-    "detail": "",
-    "author": {
-      "id": 0,
-      "fname": "",
+  "id": 1,
+  "is_complete": false,
+
+  "day": {
+    "id": 1,
+    "name": "Monday"
+  },
+
+  "room": {
+    "id": 1,
+    "name": "Bathroom"
+  },
+
+  "list_items": [
+    {
+      "id": 1,
+      "detail": "Wipe Down Mirror",
+      "is_complete": false,
+      "assignee": {
+        "id": 1,
+        "name": "Kaiden"
+      },
+      "star_value": {
+        "id": 1,
+        "value": 1,
+        "name": "One Star"
+      } 
+    },
+    {
+      "id": 2,
+      "detail": "Mop Floor",
+      "is_complete": false,
+      "assignee": {
+        "id": 2,
+        "name": "Makensie"
+      },
+      "star_value": {
+        "id": 2,
+        "value": 1,
+        "name": "Two Stars"
+      }
     }
-  }
+  ],
+
+  "people": [
+    {
+      "id": 1,
+      "name": "Kaiden"
+    },
+    {
+      "id": 2,
+      "name": "Makensie"
+    }
+  ]
+}

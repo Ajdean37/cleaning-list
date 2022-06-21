@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const deleteListsById = require('../services/deleteListsById');
-const getAllListsService = require('../services/getAllListsService');
-const getListsById = require('../services/getListsById');
-const createListService = require('../services/createListService');
+const deleteListsById = require('../services/v1/deleteListsById');
+const getAllListsService = require('../services/v1/getAllListsService');
+const getListsById = require('../services/v1/getListsById');
+const createListService = require('../services/v1/createListService');
 
 
 

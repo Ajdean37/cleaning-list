@@ -3,13 +3,14 @@ dotenv.config();
 
 const express = require('express');
 const app = express();
-const listRouter = require('./routes/list-router');
+const dailyChoresListRouter = require('./routes/daily-chores-list-router');
+const roomsRouter = require('./routes/roomsRouter');
 
 // middleware
 app.use( express.json() );
 
-app.use('/api/lists', listRouter);
-
+// app.use('/api/daily-chores-list', dailyChoresListRouter);
+app.use('/api/rooms', roomsRouter)
 
 const port = process.env.NODE_API_PORT || 5000;
 
