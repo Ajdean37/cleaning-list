@@ -7,7 +7,7 @@ async function createRoomService(req, res, next) {
     const newRecordId = result[0].insertId;
 
     try {
-        [roomRows] = await pool.query(`SELECT * FROM rooms WHERE id = ?`, newRecordId);
+        [roomRows] = await pool.query(`SELECT * FROM room WHERE id = ?`, newRecordId);
         res.resData = roomRows;
     } catch (error) {
         throw error;

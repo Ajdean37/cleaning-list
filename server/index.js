@@ -3,6 +3,7 @@ dotenv.config();
 
 const express = require('express');
 const app = express();
+
 const roomsRouter = require('./routes/roomsRouter');
 const daysRouter = require('./routes/daysRouter');
 const peopleRouter = require('./routes/peopleRouter');
@@ -11,16 +12,16 @@ const starRouter = require('./routes/starRouter');
 // middleware
 app.use( express.json() );
 
+//config tables (create first) create, read, delete---- update
+// '/api/rooms'
+// '/api/days'
+// '/api/people'
+// '/api/star-value'
 app.use('/api/rooms', roomsRouter);
 app.use('/api/days', daysRouter);
 app.use('api/people', peopleRouter);
 app.use('api/stars', starRouter);
 
-//config tables (create first) create, read, delete---- update
-// '/api/days'
-// '/api/star-value'
-// '/api/people'
-// '/api/rooms'
 
 //one to one relationships create a list item, get all list items, delete list items
 // stretch goal --- get list item and relational data

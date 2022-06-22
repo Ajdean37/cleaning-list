@@ -1,9 +1,10 @@
 const express = require('express');
+const router = express.Router();
+
 const createStarValueService = require('../services/starValue/createStarValueService');
 const deleteStarValueById = require('../services/starValue/deleteStarValueById');
-const getAllStarsService = require('../services/starValue/getAllStarsService');
 const getStarValueById = require('../services/starValue/getStarValueById');
-const router = express.Router();
+const getAllStarsService = require('../services/starValue/getAllStarsService');
 
 
 router.post('/', createStarValueService, (req, res) => {

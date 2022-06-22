@@ -1,9 +1,10 @@
 const express = require('express');
+const router = express.Router();
+
 const createPeopleService = require('../services/people/createPeopleService');
 const deletePeopleById = require('../services/people/deletePeopleById');
-const getAllPeopleService = require('../services/people/getAllPeopleService');
 const getPeopleById = require('../services/people/getPeopleById');
-const router = express.Router();
+const getAllPeopleService = require('../services/people/getAllPeopleService');
 
 
 router.post('/', createPeopleService, (req, res) => {

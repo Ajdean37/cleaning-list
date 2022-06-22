@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+
 const createRoomService = require('../services/rooms/createRoomService');
 const deleteRoomById = require('../services/rooms/deleteRoomById');
-const getAllRoomsService = require('../services/rooms/getAllRoomsService');
 const getRoomsById = require('../services/rooms/getRoomsById');
+const getAllRoomsService = require('../services/rooms/getAllRoomsService');
 
 
 router.post('/', createRoomService, (req, res) => {

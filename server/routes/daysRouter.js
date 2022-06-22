@@ -1,12 +1,14 @@
 const express = require('express');
+const router = express.Router();
+
 const createDayService = require('../services/days/createDayService');
 const deleteDaysById = require('../services/days/deleteDaysById');
-const router = express.Router();
-const getAllDaysService = require('../services/days/getAllDaysSevice');
 const getDaysById = require('../services/days/getDaysById');
+const getAllDaysService = require('../services/days/getAllDaysSevice');
 
 
-router.get('/', getAllDaysService, (req, res) => {
+// create new post day service
+router.post('/', createDayService, (req, res) => {
     res.send(res.resData);
 })
 
@@ -20,10 +22,8 @@ router.get('/:id', getDaysById, (req, res) => {
     res.send(res.resData);
 })
 
-// create new post day service
-router.post('/', createDayService, (req, res) => {
+router.get('/', getAllDaysService, (req, res) => {
     res.send(res.resData);
 })
-
 
 module.exports = router;
