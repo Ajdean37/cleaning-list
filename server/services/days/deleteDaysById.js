@@ -1,6 +1,6 @@
 const pool = require("../../databases/pool");
 
-async function deleteListById(req, res, next) {
+async function deleteDayById(req, res, next) {
 
   try {
     let queryText = `SELECT * FROM day WHERE id = ?;`;
@@ -11,7 +11,7 @@ async function deleteListById(req, res, next) {
   }
 
   try {
-    let queryText = `DELETE FROM days WHERE id = ?;`;
+    let queryText = `DELETE FROM day WHERE id = ?;`;
     await pool.query(queryText, req.params.id);
   } catch (error) {
     throw error;
@@ -20,5 +20,4 @@ async function deleteListById(req, res, next) {
   next();
 }
   
-  module.exports = deleteListById;
-  
+  module.exports = deleteDayById;

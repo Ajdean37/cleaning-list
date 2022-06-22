@@ -1,4 +1,4 @@
-const pool = require("../../../databases/pool");
+const pool = require('../../databases/pool');
 
 async function getDaysById(req, res, next) {
 

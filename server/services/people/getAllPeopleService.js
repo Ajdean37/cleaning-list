@@ -1,18 +1,14 @@
 const pool = require("../../databases/pool");
 
-
-async function getAllListsService(req, res, next) {
-
-  let query = `SELECT * FROM list;`;
+async function getAllPeopleService(req, res, next) {
+  let query = `SELECT * FROM people;`;
 
   // const result = await pool.query( query );
   const [rows, fields] = await pool.query( query );
 
-  console.log(rows);
   res.resData = [...rows];
 
   next();
 }
 
-
-module.exports = getAllListsService;
+module.exports = getAllPeopleService;

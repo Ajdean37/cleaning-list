@@ -1,11 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const createRoomService = require('../services/v2/rooms/createRoomService');
+const createRoomService = require('../services/rooms/createRoomService');
+const deleteRoomById = require('../services/rooms/deleteRoomById');
+const getAllRoomsService = require('../services/rooms/getAllRoomsService');
+const getRoomsById = require('../services/rooms/getRoomsById');
 
 
 router.post('/', createRoomService, (req, res) => {
-    console.log(process.env.DATABASE_NAME);
     res.send(res.resData);
-});
+})
+
+router.delete('/:id', deleteRoomById, (req, res) => {
+    res.send(res.resData);
+})
+
+router.get('/:id', getRoomsById, (req, res) => {
+    res.send(res.resData);
+})
+
+router.get('/', getAllRoomsService, (req, res) => {
+    res.send(res.resData);
+})
 
 module.exports = router;

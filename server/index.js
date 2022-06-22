@@ -3,19 +3,18 @@ dotenv.config();
 
 const express = require('express');
 const app = express();
-const dailyChoresListRouter = require('./routes/daily-chores-list-router');
 const roomsRouter = require('./routes/roomsRouter');
 const daysRouter = require('./routes/daysRouter');
+const peopleRouter = require('./routes/peopleRouter');
+const starRouter = require('./routes/starRouter');
 
 // middleware
 app.use( express.json() );
 
-// app.use('/api/daily-chores-list', dailyChoresListRouter);
 app.use('/api/rooms', roomsRouter);
 app.use('/api/days', daysRouter);
-
-
-
+app.use('api/people', peopleRouter);
+app.use('api/stars', starRouter);
 
 //config tables (create first) create, read, delete---- update
 // '/api/days'

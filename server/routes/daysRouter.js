@@ -1,9 +1,9 @@
 const express = require('express');
-const createDayService = require('../services/v2/days/createDayService');
-const deleteDaysById = require('../services/v2/days/deleteDaysById');
+const createDayService = require('../services/days/createDayService');
+const deleteDaysById = require('../services/days/deleteDaysById');
 const router = express.Router();
-const getAllDaysService = require('../services/v2/days/getAllDaysSevice');
-const getDaysById = require('../services/v2/days/getDaysById');
+const getAllDaysService = require('../services/days/getAllDaysSevice');
+const getDaysById = require('../services/days/getDaysById');
 
 
 router.get('/', getAllDaysService, (req, res) => {
