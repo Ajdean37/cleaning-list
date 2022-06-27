@@ -1,7 +1,7 @@
 const pool = require("../../databases/pool");
 
 async function createDayService(req, res, next) {
-    let query = 'INSERT INTO day SET ?;';
+    let query = `INSERT INTO day SET ?;`;
 
     const result = await pool.query(query, req.body );
     const newRecordId = result[0].insertId;

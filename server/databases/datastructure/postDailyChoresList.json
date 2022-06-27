@@ -1,0 +1,22 @@
+{
+  "is_complete": false,
+
+  "day_id": 2,
+
+  "room_id": 1,
+
+  "list_items": [
+    {
+      "detail": "Wipe Down Mirror",
+      "is_complete": false,
+      "person_id": 1,     
+      "star_value_id": 1
+    },
+    {
+      "detail": "Clean Toilet",
+      "is_complete": false,
+      "person_id": 2,     
+      "star_value_id": 1
+    }
+  ]
+}

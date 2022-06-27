@@ -8,6 +8,8 @@ const roomsRouter = require('./routes/roomsRouter');
 const daysRouter = require('./routes/daysRouter');
 const peopleRouter = require('./routes/peopleRouter');
 const starRouter = require('./routes/starRouter');
+const sandboxRouter = require('./routes/sandboxRouter');
+const dailyChoresListRouter = require('./routes/dailyChoresListRouter');
 
 // middleware
 app.use( express.json() );
@@ -19,9 +21,10 @@ app.use( express.json() );
 // '/api/star-value'
 app.use('/api/rooms', roomsRouter);
 app.use('/api/days', daysRouter);
-app.use('api/people', peopleRouter);
-app.use('api/stars', starRouter);
-
+app.use('/api/people', peopleRouter);
+app.use('/api/stars', starRouter);
+app.use('/api/sandbox', sandboxRouter);
+app.use('/api/daily-chores-lists', dailyChoresListRouter);
 
 //one to one relationships create a list item, get all list items, delete list items
 // stretch goal --- get list item and relational data

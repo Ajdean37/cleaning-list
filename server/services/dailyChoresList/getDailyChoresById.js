@@ -1,8 +1,8 @@
 const pool = require('../../databases/pool');
 
-async function getPeopleById(req, res, next) {
+async function getDailyChoresById(req, res, next) {
 
-    let query = `SELECT * FROM person WHERE id = ?;`;
+    let query = `SELECT * FROM daily_chore_list WHERE id = ?;`;
 
     const [rows, fields] = await pool.query( query, req.params.id );
 
@@ -11,4 +11,4 @@ async function getPeopleById(req, res, next) {
     next();
 }
 
-module.exports = getPeopleById;
+module.exports = getDailyChoresById;
