@@ -3,6 +3,8 @@ const createDailyChoresListService = require('../services/dailyChoresList/create
 const deleteDailyChoresById = require('../services/dailyChoresList/deleteDailyChoresById');
 const getAllDailyChoresService = require('../services/dailyChoresList/getAllDailyChoresService');
 const getDailyChoresById = require('../services/dailyChoresList/getDailyChoresById');
+const updateDailyChoresById = require('../services/dailyChoresList/updateDailyChoresById');
+const getAllListItemsService = require('../services/dailyChoresList/getAllListItemsService');
 const router = express.Router();
 
 
@@ -22,5 +24,11 @@ router.get('/', getAllDailyChoresService, (req, res) => {
   res.send(res.resData);
 })
 
+router.put('/:id', updateDailyChoresById, (req, res) => {
+  res.send(res.resData);
+})
 
+router.get('/:id/list-items', getAllListItemsService, (req, res) => {
+  res.send(res.resData);
+})
 module.exports = router;

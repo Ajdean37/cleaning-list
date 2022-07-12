@@ -1,0 +1,29 @@
+
+[
+  {
+    "id": 1,
+    "day": {
+      "id": 1,
+      "name": "Monday"
+    },
+    "room": {
+      "id": 1,
+      "name": "Bathroom",
+      "is_clean": false
+    },
+    "is_complete": false
+  },
+  {
+    "id": 2,
+    "day": {
+      "id": 1,
+      "name": "Tuesday"
+    },
+    "room": {
+      "id": 2,
+      "name": "Bedroom",
+      "is_clean": false
+    },
+    "is_complete": false
+  },
+]

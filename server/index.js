@@ -10,9 +10,13 @@ const peopleRouter = require('./routes/peopleRouter');
 const starRouter = require('./routes/starRouter');
 const sandboxRouter = require('./routes/sandboxRouter');
 const dailyChoresListRouter = require('./routes/dailyChoresListRouter');
+const listItemRouter = require('./routes/listItemRouter');
+
 
 // middleware
 app.use( express.json() );
+const cors = require('cors');
+app.use(cors());
 
 //config tables (create first) create, read, delete---- update
 // '/api/rooms'
@@ -25,6 +29,9 @@ app.use('/api/people', peopleRouter);
 app.use('/api/stars', starRouter);
 app.use('/api/sandbox', sandboxRouter);
 app.use('/api/daily-chores-lists', dailyChoresListRouter);
+app.use('/api/list-item', listItemRouter);
+
+
 
 //one to one relationships create a list item, get all list items, delete list items
 // stretch goal --- get list item and relational data
