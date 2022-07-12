@@ -17,40 +17,31 @@
       "id": 1,
       "detail": "Wipe Down Mirror",
       "is_complete": false,
-      "assignee": {
-        "id": 1,
-        "name": "Kaiden"
-      },
       "star_value": {
         "id": 1,
         "value": 1,
         "name": "One Star"
-      } 
+      },
+      "person": {
+        "id": 1,
+        "name": "Kaiden",
+        "img_src": "https://placeholder.com/300w"
+      },
     },
     {
       "id": 2,
       "detail": "Mop Floor",
       "is_complete": false,
-      "assignee": {
-        "id": 2,
-        "name": "Makensie"
-      },
       "star_value": {
         "id": 2,
         "value": 1,
         "name": "Two Stars"
+      },
+      "person": {
+        "id": 2,
+        "name": "Makensie",
+        "img_src": "https://placeholder.com/300w"
       }
-    }
-  ],
-
-  "people": [
-    {
-      "id": 1,
-      "name": "Kaiden"
-    },
-    {
-      "id": 2,
-      "name": "Makensie"
     }
   ]
 }
