@@ -10,7 +10,7 @@ const peopleRouter = require('./routes/peopleRouter');
 const starRouter = require('./routes/starRouter');
 const sandboxRouter = require('./routes/sandboxRouter');
 const dailyChoresListRouter = require('./routes/dailyChoresListRouter');
-const listItemRouter = require('./routes/listItemRouter');
+const listItemsRouter = require('./routes/listItemsRouter');
 
 
 // middleware
@@ -29,7 +29,7 @@ app.use('/api/people', peopleRouter);
 app.use('/api/stars', starRouter);
 app.use('/api/sandbox', sandboxRouter);
 app.use('/api/daily-chores-lists', dailyChoresListRouter);
-app.use('/api/list-item', listItemRouter);
+app.use('/api/list-items', listItemsRouter);
 
 
 
