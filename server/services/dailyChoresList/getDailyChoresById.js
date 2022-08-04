@@ -11,7 +11,9 @@ async function getDailyChoresById(req, res, next) {
         ...dailyChoresList,
         "day": null,
         "room": null,
-        "list_items": []
+        "list_items": [],
+        "is_complete": Boolean(dailyChoresList.is_complete)
+
     };
 
     query = `SELECT * FROM day WHERE id = ?;`;
@@ -36,8 +38,9 @@ async function getDailyChoresById(req, res, next) {
             ...dailyChoresListItem, 
             star_value: null,
             person: null,
-
+            is_complete: Boolean(dailyChoresListItem.is_complete)
         };
+
         query = `SELECT * FROM star_value WHERE id = ?;`;
         const [starValue] = await pool.query( query, dailyChoresListItem.star_value_id );
         result.star_value = starValue[0]
@@ -45,6 +48,7 @@ async function getDailyChoresById(req, res, next) {
         query = `SELECT * FROM person WHERE id = ?;`;
         const [people] = await pool.query( query, dailyChoresListItem.person_id );
         result.person = people[0]
+
 
         delete result.room_id;
         delete result.person_id;
