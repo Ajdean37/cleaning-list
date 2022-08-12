@@ -6,8 +6,8 @@ const getDailyChoresById = require('../services/dailyChoresList/getDailyChoresBy
 const updateDailyChoresById = require('../services/dailyChoresList/updateDailyChoresById');
 const getAllListItemsService = require('../services/dailyChoresList/getAllListItemsService');
 const router = express.Router();
-const toggleAllIsCompleteService = require('../services/listItems/toggleAllIsCompleteService');
-
+const toggleAllIsCompleteService = require('../services/dailyChoresList/toggleAllIsCompleteService');
+const toggleAllResetService = require('../services/dailyChoresList/toggleAllResetService');
 
 router.post('/', createDailyChoresListService, (req, res) => {
   res.send(res.resData);
@@ -36,4 +36,9 @@ router.get('/:id/list-items', getAllListItemsService, (req, res) => {
 router.put('/:id/list-items/toggle-all-is-complete', toggleAllIsCompleteService, (req, res) => {
   res.send(res.resData);
 })
+
+router.put('/list-items/toggle-all-reset', toggleAllResetService, (req, res) => {
+  res.send(res.resData);
+})
+
 module.exports = router;
